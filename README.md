@@ -11,8 +11,6 @@ Este projeto tem como foco a criação de um **jogo interativo do 8-Puzzle**, ut
 
   * Busca em Largura (BFS)
   * Busca em Profundidade (DFS)
-  * Busca de Custo Uniforme (UCS)
-  * Busca Gulosa
   * A\* com duas heurísticas diferentes
 * Elaboração de um relatório comparando o desempenho de cada método.
 
@@ -22,15 +20,13 @@ Este projeto tem como foco a criação de um **jogo interativo do 8-Puzzle**, ut
 
 * **Busca em Largura (BFS)**: explora todos os estados no mesmo nível antes de ir mais fundo.
 * **Busca em Profundidade (DFS)**: mergulha fundo no grafo, podendo ser arriscada sem um limite de profundidade.
-* **Busca de Custo Uniforme (UCS)**: prioriza caminhos com menor custo acumulado.
-* **Busca Gulosa**: foca em estados mais promissores com base apenas na heurística.
 * **A\***: combina custo acumulado + heurística (f(n) = g(n) + h(n)) para decisões mais equilibradas.
 
 ---
 
 ## 📏 Heurísticas Utilizadas
 
-Para as buscas com heurística (Gulosa e A\*), foram testadas:
+Para as buscas com heurística (A\*), foram testadas:
 
 1. **Número de peças fora do lugar**: simples e direta, oferece soluções rápidas, mas não necessariamente eficientes.
 2. **Distância de Manhattan**: soma das distâncias verticais e horizontais das peças até suas posições corretas — mais precisa na maioria dos casos.
@@ -74,8 +70,6 @@ O relatório detalhado acompanha a análise dos resultados obtidos com cada mét
 ├── search/              # Implementações dos algoritmos
 │   ├── bfs.py
 │   ├── dfs.py
-│   ├── ucs.py
-│   ├── greedy.py
 │   └── astar.py
 ├── heuristics/          # Heurísticas específicas
 │   ├── misplaced.py
@@ -84,16 +78,6 @@ O relatório detalhado acompanha a análise dos resultados obtidos com cada mét
 │   └── app.py
 ├── utils/               # Funções auxiliares
 │   └── util.py
-├── tests/               # Testes e arquivos de entrada
-│   ├── tests.py
-│   ├── state_test_gui.txt
-│   └── data/
-│       ├── Easy.txt
-│       ├── Medium.txt
-│       └── Hard.txt
-├── docs/                # Relatórios do projeto
-│   ├── relatório.pdf
-│   └── relatório.docx
 ├── icon.ico             # Ícone do executável
 ├── .gitignore
 └── README.md
